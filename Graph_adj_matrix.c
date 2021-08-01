@@ -9,10 +9,7 @@ struct graph* adj_Matrix_of_Graph(){
 	int u,v,i;
 	struct graph *G;
 	G = (struct graph*)malloc(sizeof(struct graph));
-	if(G){
-		printf("memory error");
-		return 1;
-	}
+	
 	printf("Enter the number of nodes and edges\n");
 	scanf("%d %d",&G->v,&G->e);
 	G->Adj = (int**)malloc(sizeof(int)*(G->v*G->v)); 
@@ -34,5 +31,6 @@ int main()
 {	
 	struct graph *G;
 	G = adj_Matrix_of_Graph();
+	
 	return 0;
 }
